@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahiro's Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+                "header header"
+                "sidebar content";
+      height: 100vh;
+      gap: 20px;
+    }
+
+    header {
+      grid-area: header;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 32px;
+      color: #444;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .sidebar form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar label {
+      font-size: 18px;
+    }
+
+    .sidebar input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .content {
+      grid-area: content;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .content ul {
+      list-style: none;
+    }
+
+    .content ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    .content ul li a {
+      text-decoration: none;
+      color: #00aaff;
+      transition: color 0.2s ease;
+    }
+
+    .content ul li a:hover {
+      color: #f4b3d3;
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <h1>Mahiro's Blog</h1>
+  <p>Don't live in the matrix world</p>
+</header>
+
+<!-- Sidebar (Category Selection) -->
+<div class="sidebar">
+  <h2>Select a Category</h2>
+  <form>
+    <label>
+      <input type="radio" name="category" value="github-projects">
+      Github projects
+    </label>
+    <label>
+      <input type="radio" name="category" value="gaming">
+      Gaming
+    </label>
+    <label>
+      <input type="radio" name="category" value="technology">
+      Technology
+    </label>
+    <label>
+      <input type="radio" name="category" value="anime-critics">
+      Anime critics
+    </label>
+  </form>
+</div>
+
+<!-- Content (Article List) -->
+<div class="content">
+  <h2>Article List</h2>
+  <ul>
+    <li><a href="#">How to start with GitHub</a></li>
+  </ul>
+</div>
+</body>
+</html>
