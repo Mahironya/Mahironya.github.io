@@ -3,154 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modern Landing Page</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+    <title>Welcome to Joseph Lin's Website - Old-Browser Friendly</title>
+    <style type="text/css">
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+            background-color: #C0C0C0;
+            font-family: Verdana, Arial, sans-serif;
+            color: #000000;
         }
-
-        header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #f4f4f9;
-        }
-
-        .hero {
-            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
-            height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-
-        section {
-            padding: 50px 20px;
-        }
-
-        .content {
+        .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border: 2px solid #0000FF;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #FF00FF;
+            text-align: center;
+            text-shadow: 2px 2px #0000FF;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
             text-align: center;
         }
-
-        .content h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        a {
+            color: #FF0000;
+            text-decoration: none;
         }
-
-        .content p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 40px;
+        a:hover {
+            text-decoration: underline;
         }
-
-        .btn-primary {
-            background-color: #4a90e2;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #357ab8;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
+        .footer {
             text-align: center;
-            font-size: 0.9rem;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        .contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
-    <h1>Modern Webpage</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+<div class="container">
+    <h1>Welcome to Joseph Lin's Website</h1>
 
-<!-- Hero Section -->
-<div class="hero">
-    <div>
-        <h2>Welcome to Our Modern Page</h2>
-        <p>This is a clean, modern design that fits perfectly on any screen size. Customize it to fit your project!</p>
+    <p align="center">
+        <font size="4" color="#0000FF">Explore My Projects</font>
+    </p>
+
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Projects</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td><a href="#">Project 1</a></td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+            <td><a href="#">Project 2</a></td>
+        </tr>
+        <tr>
+            <td>AI & ML</td>
+            <td><a href="#">Project 3</a></td>
+        </tr>
+    </table>
+
+    <div class="contact">
+        <p><strong>Contact me:</strong></p>
+        <p>Email: <a href="mailto:mahironya@icloud.com">mahironya@icloud.com</a></p>
+        <p>Bluesky: <a href="https://bsky.app/profile/mahiro23323.bsky.social" target="_blank">Follow my BlueSky profile</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Joseph Lin. All rights reserved.
     </div>
 </div>
-
-<!-- Main Content Section -->
-<section>
-    <div class="content">
-        <h2>Our Features</h2>
-        <p>We provide a variety of modern solutions to help you achieve your goals. Whether it's design, development, or consultation, we are here to assist.</p>
-        <button class="btn-primary">Get Started</button>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer>
-    <p>&copy; 2024 Modern Webpage. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
