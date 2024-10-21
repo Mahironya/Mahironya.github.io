@@ -14,7 +14,28 @@
       font-size: 18px;
       user-select: none;
     }
+    .button-top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
 
+    .modern-button {
+      background: linear-gradient(135deg,#f4b3d3 0%,#ffeb3b 100%);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .modern-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
     .custom-radio input {
       position: absolute;
       opacity: 0;
@@ -184,6 +205,10 @@
       <span class="checkmark"></span>
     </label>
   </form>
+</div>
+
+<div class="button-top-right">
+  <a href="https://mahironya.github.io" class="modern-button">Return to Home</a>
 </div>
 
 <!-- Content (Article List) -->
