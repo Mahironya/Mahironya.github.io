@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<!--    <style>-->
-<!--        /* 定义彩虹渐变颜色的类 */-->
-<!--        h1, h2, h3, h4, h5, h6 {-->
-<!--            background: linear-gradient(to right, #00ff89, orange, yellow, green, blue, indigo, violet);-->
-<!--            -webkit-background-clip: text;-->
-<!--            color: transparent;-->
-<!--        }-->
-<!--    </style>-->
+    <title>Mahiro's Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Hello World!</h1>
-<p>这是一个段<hr>落，随便写写一段语</P>
-<p style="color: hotpink">This is a pink-colored paragraph.</p>
-<p stype="font-size:20px">A paragraph size 20px</p>
-<h1 style="text-align: center">Centered aligned title</h1>
-<div style="text-align: center;">
-    <a style="color: red; font-size: 30px;" href="https://google.com" title="Google">Google</a>
+<header class="navbar">
+    <nav>
+        <ul>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- 左侧个人信息部分 -->
+    <div class="sidebar">
+        <div class="avatar"></div>
+        <div class="personal-info">
+            <h2>Mahiro</h2>
+            <p>Email: <a href="mailto:mahironya@icloud.com">mahironya@icloud.com</a></p>
+            <p>Hobby: Coding, Reading</p>
+        </div>
+    </div>
+
+    <!-- 主内容部分 -->
+    <div class="content">
+        <h2>Featured Posts</h2>
+        <p>Check out the latest articles on my <a href="https://mahironya.github.io/blog" target="_blank">blog</a>.</p>
+    </div>
 </div>
-<img src="pictures/Mahiro fighting.jpg" title="Mahiro Fighting" width="400" height="500">
-<img src="pictures/yuguigou.jpeg" title="Mahiro Fighting" width="400" height="500">
 </body>
 </html>
