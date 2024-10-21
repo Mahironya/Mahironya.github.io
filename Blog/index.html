@@ -5,6 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahiro's Blog</title>
   <style>
+    .custom-radio {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .custom-radio input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-radio input:checked ~ .checkmark {
+      background-color: #f4b3d3; /* 选中时的颜色变化 */
+    }
+
+    .checkmark::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .custom-radio input:checked ~ .checkmark::after {
+      display: block;
+    }
+
+    .custom-radio .checkmark::after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -114,21 +163,25 @@
 <div class="sidebar">
   <h2>Select a Category</h2>
   <form>
-    <label>
+    <label class="custom-radio">
       <input type="radio" name="category" value="github-projects">
       Github projects
+      <span class="checkmark"></span>
     </label>
-    <label>
+    <label class="custom-radio">
       <input type="radio" name="category" value="gaming">
       Gaming
+      <span class="checkmark"></span>
     </label>
-    <label>
+    <label class="custom-radio">
       <input type="radio" name="category" value="technology">
       Technology
+      <span class="checkmark"></span>
     </label>
-    <label>
+    <label class="custom-radio">
       <input type="radio" name="category" value="anime-critics">
       Anime critics
+      <span class="checkmark"></span>
     </label>
   </form>
 </div>
@@ -137,8 +190,9 @@
 <div class="content">
   <h2>Article List</h2>
   <ul>
-    <li><a href="#">How to start with GitHub</a></li>
+    <li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">How to start with GitHub</a></li>
   </ul>
 </div>
 </body>
 </html>
+
