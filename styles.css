@@ -11,6 +11,13 @@ body {
 }
 
 header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* 通用设置 */
+.navbar {
     background-color: #444;
     padding: 10px 0;
     text-align: center;
@@ -26,17 +33,51 @@ header {
     margin: 0 20px;
 }
 
-.navbar ul li a {
+.nav-btn {
+    display: inline-block;
+    padding: 10px 30px;
     color: white;
+    background-color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease; /* 添加过渡效果 */
 }
 
-.navbar ul li a:hover {
-    color: #00aaff;
+.nav-btn:hover {
+    background-color: #f4b3d3; /* 鼠标悬停时颜色变化 */
+    transform: scale(1.1); /* 放大按钮 */
 }
 
+
+.nav-btn:hover::before {
+    transform: scale(1); /* 鼠标悬停时放大 */
+    background: rgba(0, 170, 255, 0.1); /* 放大时背景色微亮 */
+    border-radius: 50%;
+}
+
+.nav-btn:hover {
+    transform: scale(1.2); /* 鼠标悬停时，按钮轻微放大 */
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #aaa; /* 默认文字颜色为灰色 */
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease; /* 添加颜色过渡效果 */
+}
+
+.nav-btn:hover {
+    background-color: #f4b3d3; /* 鼠标悬停时颜色变化 */
+    color: white; /* 鼠标悬停时文字颜色变为白色 */
+    transform: scale(1.1); /* 放大按钮 */
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
