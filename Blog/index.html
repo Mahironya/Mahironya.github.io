@@ -1,223 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahiro's Blog</title>
   <style>
-    .custom-radio {
-      display: block;
-      position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      font-size: 18px;
-      user-select: none;
-    }
-    .button-top-right {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .modern-button {
-      background: linear-gradient(135deg,#f4b3d3 0%,#ffeb3b 100%);
-      color: #fff;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .modern-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    }
-    .custom-radio input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-    }
-
-    .checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 25px;
-      width: 25px;
-      background-color: #eee;
-      border-radius: 50%;
-      transition: background-color 0.3s ease;
-    }
-
-    .custom-radio input:checked ~ .checkmark {
-      background-color: #f4b3d3; /* 选中时的颜色变化 */
-    }
-
-    .checkmark::after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-
-    .custom-radio input:checked ~ .checkmark::after {
-      display: block;
-    }
-
-    .custom-radio .checkmark::after {
-      top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f4f4f9;
       color: #333;
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-                "header header"
-                "sidebar content";
-      height: 100vh;
-      gap: 20px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 640px; /* 固定宽度 */
+      margin: 0 auto; /* 居中 */
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
     }
 
     header {
-      grid-area: header;
-      padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
     }
 
     header h1 {
-      font-size: 32px;
-      color: #444;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 16px;
+      font-size: 14px;
       color: #666;
     }
 
-    .sidebar {
-      grid-area: sidebar;
-      padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    .sidebar h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .sidebar form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .sidebar label {
-      font-size: 18px;
-    }
-
-    .sidebar input[type="radio"] {
-      margin-right: 10px;
-    }
-
     .content {
-      grid-area: content;
-      padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+      text-align: left;
     }
 
     .content h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .content ul {
       list-style: none;
+      padding: 0;
     }
 
     .content ul li {
       padding: 10px 0;
       border-bottom: 1px solid #ddd;
-      font-size: 18px;
     }
 
     .content ul li a {
       text-decoration: none;
       color: #00aaff;
-      transition: color 0.2s ease;
     }
 
     .content ul li a:hover {
-      color: #f4b3d3;
+      text-decoration: underline;
+    }
+
+    .button-top-right {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #ccc;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      .content h2 {
+        font-size: 20px;
+      }
+
+      .button-top-right {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
 <body>
-<!-- Header -->
-<header>
-  <h1>Mahiro's Blog</h1>
-  <p>Don't live in the matrix world</p>
-</header>
+<!-- Container (Centered Page) -->
+<div class="container">
+  <!-- Header -->
+  <header>
+    <h1>Mahiro's Blog</h1>
+    <p>Don't live in the matrix world</p>
+  </header>
 
-<!-- Sidebar (Category Selection) -->
-<div class="sidebar">
-  <h2>Select a Category</h2>
-  <form>
-    <label class="custom-radio">
-      <input type="radio" name="category" value="github-projects">
-      Github projects
-      <span class="checkmark"></span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="category" value="gaming">
-      Gaming
-      <span class="checkmark"></span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="category" value="technology">
-      Technology
-      <span class="checkmark"></span>
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="category" value="anime-critics">
-      Anime critics
-      <span class="checkmark"></span>
-    </label>
-  </form>
-</div>
+  <!-- Content (Article List) -->
+  <div class="content">
+    <h2>Article List</h2>
+    <ul>
+      <li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">How to start with GitHub</a></li>
+    </ul>
+  </div>
 
-<div class="button-top-right">
-  <a href="https://mahironya.github.io" class="modern-button">Return to Home</a>
-</div>
-
-<!-- Content (Article List) -->
-<div class="content">
-  <h2>Article List</h2>
-  <ul>
-    <li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">How to start with GitHub</a></li>
-  </ul>
+  <!-- Button -->
+  <a href="https://mahironya.github.io" class="button-top-right">Return to Home</a>
 </div>
 </body>
 </html>
-
