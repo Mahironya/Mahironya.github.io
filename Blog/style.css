@@ -183,3 +183,54 @@ footer {
     color: #fde0ed; /* 鼠标悬停时箭头颜色变light pink */
     transform: translateX(-5px); /* 箭头左移动态效果 */
 }
+/* Page Header 样式 */
+.page-header {
+    position: fixed; /* 固定在顶部，滚动时可见 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 占满宽度 */
+    height: 50px; /* 设置固定高度 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    backdrop-filter: blur(8px); /* 添加模糊效果 */
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5); /* 底部边框 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* 内边距 */
+    z-index: 1000; /* 确保覆盖其他内容 */
+    transition: background-color 0.3s ease; /* 滚动时背景颜色变化 */
+}
+
+/* Header 左侧 Logo */
+.page-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Header 右侧导航链接 */
+.page-header .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.page-header .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*.page-header .nav-links a:hover {*/
+/*    background-color: rgba(128, 128, 128, 0.2); !* 鼠标悬停背景加深 *!*/
+/*    color: #00aaff; !* 悬停时文字变蓝 *!*/
+/*}*/
+
+/* 滚动时背景不透明 */
+.page-header.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* 滚动时背景变为不透明 */
+}
