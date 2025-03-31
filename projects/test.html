@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时图像显示</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>实时图像</h1>
+    <img id="liveImage" alt="实时图像">
+</div>
+
+<script>
+    const refreshInterval = 1000; // 刷新间隔（毫秒）
+    const baseUrl = "http://202.142.10.11/SnapshotJPEG?Resolution=640x480&Quality=Clarity";
+    const img = document.getElementById('liveImage');
+
+    function updateImage() {
+        // 添加随机参数避免缓存
+        img.src = `${baseUrl}&_=${Math.random()}`;
+    }
+
+    // 错误处理
+    img.onerror = function() {
+        img.alt = '图像加载失败，请检查网络连接或URL';
+    };
+
+    // 定时更新
+    setInterval(updateImage, refreshInterval);
+
+    // 首次加载
+    updateImage();
+</script>
+</body>
+</html>
